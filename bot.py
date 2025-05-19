@@ -38,14 +38,11 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if data and any(data.get(k) for k in ["vendor", "type", "bank", "country"]):
         mensaje = (
-            f"💳 Marca: {data.get('vendor', 'N/A')}
-"
-            f"🧾 Tipo: {data.get('type', 'N/A')}
-"
-            f"🏦 Banco: {data.get('bank', 'N/A')}
-"
-            f"🌍 País: {data.get('country', 'N/A')}"
-        )
+    f"💳 Marca: {data.get('vendor', 'N/A')}\n"
+    f"🧾 Tipo: {data.get('type', 'N/A')}\n"
+    f"🏦 Banco: {data.get('bank', 'N/A')}\n"
+    f"🌍 País: {data.get('country', 'N/A')}"
+)
     else:
         mensaje = "❌ No se encontró información para ese BIN."
 
